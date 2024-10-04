@@ -25,7 +25,6 @@ export const Light: Story = {
 export const Dark: Story = {
   args: {
     children: 'Dark button',
-    className: ""
   },
   parameters: {
     theme: Theme.DARK,
