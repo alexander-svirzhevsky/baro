@@ -4,12 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --open",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "lint:scss": "npx stylelint \"**/*.scss\"",
     "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
+    "prettier": "npx prettier --write **/*.{ts,tsx,json}",
     "prepare": "husky"
   },
   "dependencies": {
