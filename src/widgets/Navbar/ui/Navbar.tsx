@@ -1,5 +1,5 @@
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { ThemeToggler } from '@/features/ThemeToggler/ThemeToggler/ThemeToggler';
+import { ThemeToggler } from '@/features/ThemeToggler';
 import cn from './Navbar.module.scss';
 
 type NavbarProps = {

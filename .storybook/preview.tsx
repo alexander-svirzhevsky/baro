@@ -1,22 +1,11 @@
-import React from 'react'; // TODO: remove
 import type { Preview } from '@storybook/react';
-import '../src/app/styles/index.scss'; // TODO: remove
+import { StyleDecorator, ThemeDecorator } from '../src/shared/config/storybook';
 
 const preview: Preview = {
   parameters: {
     layout: 'centered',
   },
-  decorators: [
-    (Story, { parameters }) => {
-      const { theme } = parameters;
-
-      return (
-        <div className={theme}>
-          <Story />
-        </div>
-      );
-    },
-  ],
+  decorators: [ThemeDecorator, StyleDecorator],
 };
 
 export default preview;
