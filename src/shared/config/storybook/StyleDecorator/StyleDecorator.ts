@@ -1,3 +1,3 @@
 import '@/app/styles/index.scss';
 
-export const StyleDecorator = (Story: () => any) => Story();
+export const StyleDecorator = (Story: () => JSX.Element) => Story();

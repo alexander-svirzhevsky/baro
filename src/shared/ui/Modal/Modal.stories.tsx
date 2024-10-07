@@ -1,34 +1,36 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
 
-import { Button } from './Button';
+import { Modal } from './Modal';
 import { Theme } from '@/shared/const/theme';
 
 const meta = {
-  title: 'Shared/Button',
-  component: Button,
-  parameters: {
-    layout: 'centered',
+  title: 'Shared/Modal',
+  component: Modal,
+  args: {
+    children: 'Modal content',
+    isOpened: true,
+    onClose: fn(),
   },
-  args: { onClick: fn() },
-} satisfies Meta<typeof Button>;
+  decorators: [
+    (Story) => (
+      <div id="app">
+        <Story />
+      </div>
+    ),
+  ],
+} satisfies Meta<typeof Modal>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Light: Story = {
-  args: {
-    children: 'Light button',
-  },
   parameters: {
     theme: Theme.LIGHT,
   },
 };
 
 export const Dark: Story = {
-  args: {
-    children: 'Dark button',
-  },
   parameters: {
     theme: Theme.DARK,
   },
