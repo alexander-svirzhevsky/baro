@@ -20,8 +20,6 @@ export const Modal = ({
   const [isMounted, setIsMounted] = useState(false);
   const { theme } = useTheme();
 
-  console.log('theme: ', theme);
-
   const mods: Mods = {
     [cn['opened']]: isOpened,
   };
