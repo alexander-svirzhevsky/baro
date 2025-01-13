@@ -1,13 +1,21 @@
 .input {
-  border: 2px solid var(--primary-color);
+  border: none;
   width: 100%;
-  background: none;
+  background: #fff;
   padding: 4px 8px;
   color: var(--text-color);
-  border-radius: 6px;
+  border-radius: 3px;
+  height: 38px;
 
   &:focus {
     outline: 1px solid;
     outline-offset: 1px;
   }
+}
+
+.label {
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  margin-bottom: 8px;
 }

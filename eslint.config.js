@@ -27,6 +27,7 @@ export default [
         ],
         '@typescript-eslint/no-explicit-any': 'warn',
         'no-unused-vars': 0,
+        'quotes': ["error", "single"]
       },
     },
   ),

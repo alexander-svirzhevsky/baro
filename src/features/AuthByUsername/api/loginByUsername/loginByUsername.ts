@@ -1,5 +1,5 @@
 import { api } from '@/shared/api/api';
-import { LoginForm } from '../../types/loginForm';
+import { LoginForm } from '../../model/types/loginForm';
 import { User } from '@/entities/User';
 
 export const loginByUsername = (data: LoginForm) => {

@@ -5,6 +5,7 @@ import {
 import { AppRoutes } from '@/shared/const/router';
 import { MainLayout } from '@/app/layouts/MainLayout';
 import { MainPage } from '@/pages/MainPage';
+import { NewsPage } from '@/pages/NewsPage';
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
       {
         path: AppRoutes.MAIN,
         element: <MainPage />,
+      },
+      {
+        path: AppRoutes.NEWS,
+        element: <NewsPage />,
       },
     ],
   },

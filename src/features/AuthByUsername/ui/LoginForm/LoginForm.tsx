@@ -5,7 +5,7 @@ import { FormEvent, useCallback, useState } from 'react';
 import { VStack } from '@/shared/ui/Stack';
 import { Button } from '@/shared/ui/Button/Button';
 import { useMutation } from '@tanstack/react-query';
-import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
+import { loginByUsername } from '../../api/loginByUsername/loginByUsername';
 import { LOCAL_STORAGE_USER_KEY } from '@/shared/const/localstorage';
 
 export interface LoginFormProps {
@@ -46,12 +46,12 @@ const LoginForm = ({ className, onSuccess }: LoginFormProps) => {
   return (
     <div className={classNames(cn['LoginForm'], {}, [className])}>
       <form onSubmit={onSubmit}>
-        <VStack gap="8" align="start">
+        <VStack gap="16" align="stretch">
           <Input
             value={username}
             onChange={onChangeName}
             placeholder="user"
-            label="User username"
+            label="Username"
           />
           <Input
             value={password}

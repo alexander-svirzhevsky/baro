@@ -3,7 +3,7 @@ import cn from './Flex.module.scss';
 import { HTMLAttributes, ReactNode } from 'react';
 
 type FlexJustify = 'start' | 'end' | 'center' | 'between';
-type FlexAlign = 'start' | 'center' | 'end';
+type FlexAlign = 'start' | 'center' | 'end' | 'stretch';
 type FlexDirection = 'row' | 'column';
 type FlexWrap = 'nowrap' | 'wrap';
 type FlexGap = '4' | '8' | '16' | '24' | '32';
@@ -34,6 +34,7 @@ const alignClasses: Record<FlexAlign, string> = {
   start: cn.alignStart,
   center: cn.alignCenter,
   end: cn.alignEnd,
+  stretch: cn.alignStretch,
 };
 
 const gapClasses: Record<FlexGap, string> = {
