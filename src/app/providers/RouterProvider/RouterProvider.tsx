@@ -5,7 +5,9 @@ import {
 import { AppRoutes } from '@/shared/const/router';
 import { MainLayout } from '@/app/layouts/MainLayout';
 import { MainPage } from '@/pages/MainPage';
-import { NewsPage } from '@/pages/NewsPage';
+import { lazy, Suspense } from 'react';
+
+const NewsPage = lazy(() => import('@/pages/NewsPage'));
 
 const router = createBrowserRouter([
   {
@@ -18,7 +20,11 @@ const router = createBrowserRouter([
       },
       {
         path: AppRoutes.NEWS,
-        element: <NewsPage />,
+        element: (
+          <Suspense fallback="Loading...">
+            <NewsPage />
+          </Suspense>
+        ),
       },
     ],
   },

@@ -18,8 +18,7 @@ export const LoginModal = ({
   return (
     <div className={classNames(cn['LoginModal'], {}, [className])}>
       <Modal isOpened={isOpened} onClose={onCloseModal}>
-        {/* TODO: add loader */}
-        <Suspense fallback={<span>Loading...</span>}>
+        <Suspense fallback="Loading...">
           <LoginFormAsync onSuccess={onCloseModal} />
         </Suspense>
       </Modal>
