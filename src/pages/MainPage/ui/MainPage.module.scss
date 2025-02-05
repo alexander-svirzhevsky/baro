@@ -1,0 +1,7 @@
+.MainPage {
+  min-height: calc(100vh - var(--header-height));
+  background-image: url('../../../shared/assets/images/hero.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}

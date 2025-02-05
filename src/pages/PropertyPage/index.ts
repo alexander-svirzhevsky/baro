@@ -1,0 +1,1 @@
+export { PropertyPage as default } from './ui/PropertyPage'

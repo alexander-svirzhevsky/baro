@@ -1,15 +1,29 @@
 .Navbar {
   width: 100%;
-  padding: 16px 0;
-  border-bottom: 1px solid rgb(34 48 57 / 20%);
-
-  // background-color: var(--secondary-color);
-}
-
-.container {
-  max-width: var(--container-width);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
+  height: var(--header-height);
+}
+
+.controles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+.profileIcon {
+  cursor: pointer;
+  min-width: 34px;
+  max-width: 34px;
+  min-height: 34px;
+  max-height: 34px;
 }

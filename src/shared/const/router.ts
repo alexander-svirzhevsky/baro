@@ -1,5 +1,5 @@
 export enum AppRoutes {
   MAIN = '/',
-  NEWS = '/news',
-  PROFILE = '/profile',
+  BLOG = '/blog',
+  PROPERTY = '/property',
 }

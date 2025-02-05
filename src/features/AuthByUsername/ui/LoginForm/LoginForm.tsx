@@ -17,7 +17,7 @@ const LoginForm = ({ className, onSuccess }: LoginFormProps) => {
   const [username, setName] = useState('');
   const [password, setPassword] = useState('');
 
-  const mutation = useMutation({
+  const { mutate, isPending, isError, error } = useMutation({
     mutationKey: ['loginByUsername'],
     mutationFn: loginByUsername,
     onSuccess: ({ data }) => {
@@ -37,11 +37,13 @@ const LoginForm = ({ className, onSuccess }: LoginFormProps) => {
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    mutation.mutate({
+    mutate({
       username,
       password,
     });
   };
+
+  console.log('error: ', error);
 
   return (
     <div className={classNames(cn['LoginForm'], {}, [className])}>
@@ -60,7 +62,11 @@ const LoginForm = ({ className, onSuccess }: LoginFormProps) => {
             placeholder="*****"
             label="Password"
           />
-          <Button type="submit">Send</Button>
+          <Button type="submit" disabled={isPending} isLoading={isPending}>
+            Send
+          </Button>
+          {/* TODO: add new component for Error text */}
+          {isError && <span className={cn.error}>{error.message}</span>}
         </VStack>
       </form>
     </div>

@@ -5,9 +5,14 @@
 
 #app {
   font: var(--font-m);
-  color: var(--text-color);
-  background-color: var(--bg-color);
+  color: var(--black);
   min-height: 100vh;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.home-section {
+  background-color: var(--accent-2);
 }
 
 .container {

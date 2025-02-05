@@ -1,0 +1,30 @@
+.DropDown {
+  position: relative;
+}
+
+.menuContainer {
+  position: absolute;
+  top: 110%;
+}
+
+.menuList {
+  min-width: 120px;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: var(--dropdown-box-shadow);
+  background-color: white;
+  overflow: hidden;
+}
+
+.triggerElement {
+  display: flex;
+}
+
+.item {
+  padding: 8px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--black-shade-3);
+  }
+}

@@ -1,21 +1,18 @@
 .input {
-  border: none;
   width: 100%;
   background: #fff;
-  padding: 4px 8px;
-  color: var(--text-color);
-  border-radius: 3px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--black-shade-2);
   height: 38px;
 
-  &:focus {
-    outline: 1px solid;
-    outline-offset: 1px;
+  ::placeholder {
+    color: var(--black-shade);
   }
 }
 
 .label {
   display: inline-block;
-  color: rgb(255 255 255);
   font-weight: 700;
   margin-bottom: 8px;
 }

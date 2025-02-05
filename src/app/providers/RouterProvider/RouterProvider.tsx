@@ -7,7 +7,8 @@ import { MainLayout } from '@/app/layouts/MainLayout';
 import { MainPage } from '@/pages/MainPage';
 import { lazy, Suspense } from 'react';
 
-const NewsPage = lazy(() => import('@/pages/NewsPage'));
+const BlogPage = lazy(() => import('@/pages/BlogPage'));
+const PropertyPage = lazy(() => import('@/pages/PropertyPage'));
 
 const router = createBrowserRouter([
   {
@@ -19,10 +20,18 @@ const router = createBrowserRouter([
         element: <MainPage />,
       },
       {
-        path: AppRoutes.NEWS,
+        path: AppRoutes.PROPERTY,
         element: (
           <Suspense fallback="Loading...">
-            <NewsPage />
+            <PropertyPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: AppRoutes.BLOG,
+        element: (
+          <Suspense fallback="Loading...">
+            <BlogPage />
           </Suspense>
         ),
       },

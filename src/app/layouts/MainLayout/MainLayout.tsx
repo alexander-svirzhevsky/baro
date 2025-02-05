@@ -8,11 +8,13 @@ type MainLayoutProps = {
 
 export const MainLayout = ({ className }: MainLayoutProps) => {
   return (
-    <main id="app" className={classNames('', {}, [className])}>
-      <Navbar />
-      <div className="container">
-        <Outlet />
-      </div>
+    <main id="app" className={classNames('home-section', {}, [className])}>
+      <section className="home-section">
+        <div className="container">
+          <Navbar />
+          <Outlet />
+        </div>
+      </section>
     </main>
   );
 };
